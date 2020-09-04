@@ -25,10 +25,16 @@ module.exports = class extends Generator {
             name: 'projectName',
             message: 'What is the name of your project?',
             default: 'example'
+        },{
+            type: 'input',
+            name: 'serviceName',
+            message: 'What is the name of your service provider?',
+            default: 'exampleService'
         }];
 
         return this.prompt(prompts).then(props => {
             this.projectName = props.projectName.replace(/\s+/g, '-').toLowerCase();
+            this.serviceName = props.serviceName.replace(/\s+/g, '-').toLowerCase();
 
 
             cb()
@@ -40,10 +46,12 @@ module.exports = class extends Generator {
         console.log("Creating project folders");
 
         let srcDir = this.destinationPath(path.join('', this.projectName));
+        let serviceDir = this.destinationPath(path.join(this.projectName, this.serviceName));
 
 
 
         mkdir.sync(srcDir);
+        mkdir.sync(serviceDir);
 
 
         this.fs.copy(
@@ -78,6 +86,7 @@ module.exports = class extends Generator {
 
         let tmplContext = {
             projectName: this.projectName,
+            serviceName: this.serviceName,
         };
 
         this.fs.copyTpl(
@@ -88,6 +97,31 @@ module.exports = class extends Generator {
         this.fs.copyTpl(
             this.templatePath('go.mod'),
             path.join(srcDir, 'go.mod'),
+            tmplContext
+        );
+        this.fs.copyTpl(
+            this.templatePath('exampleService/service.go'),
+            path.join(serviceDir, 'service.go'),
+            tmplContext
+        );
+        this.fs.copyTpl(
+            this.templatePath('exampleService/handlers'),
+            path.join(serviceDir, 'handlers'),
+            tmplContext
+        );
+        this.fs.copyTpl(
+            this.templatePath('exampleService/models'),
+            path.join(serviceDir, 'models'),
+            tmplContext
+        );
+        this.fs.copyTpl(
+            this.templatePath('exampleService/routes'),
+            path.join(serviceDir, 'routes'),
+            tmplContext
+        );
+        this.fs.copyTpl(
+            this.templatePath('exampleService/templates'),
+            path.join(serviceDir, 'templates'),
             tmplContext
         );
 

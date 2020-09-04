@@ -7,7 +7,7 @@ import (
 	gridCaller "<%= projectName %>/models/grid/caller"
 	"github.com/khankhulgun/khankhulgun"
 	"github.com/khankhulgun/khankhulgun/dbToStruct"
-
+    "<%= projectName %>/<%= serviceName %>"
 )
 
 func main() {
@@ -15,6 +15,7 @@ func main() {
 
 	app := khankhulgun.New("<%= projectName %>", gridCaller.GetMODEL, caller.GetMODEL, validationCaller.GetMessages, validationCaller.GetRules, true)
 
+    <%= serviceName %>.Set(app.Echo)
 
 	dbToStruct.GetStruct("")
 
