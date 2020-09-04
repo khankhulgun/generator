@@ -1,0 +1,107 @@
+{
+  "theme": "aside",
+  "domain": "http://localhost:3000",
+  "title": "Khan Khulgun",
+  "subTitle": "Khan Khulgun CMS based on echo & Lambda",
+  "copyright": "Khan Khulgun LLC© 2020",
+  "favicon": "/logo.png",
+  "bg": "",
+  "logo": "/logo.png",
+  "logoText": "Khan Khulgun",
+  "super_url": "/lambda/puzzle",
+  "app_url": "/control",
+  "has_language": false,
+  "languages": [
+    {
+      "label": "Moнгол",
+      "code": "mn"
+    },
+    {
+      "label": "English",
+      "code": "en"
+    }
+  ],
+  "default_language": "mn",
+  "role-redirects": [
+    {
+      "role_id": 1,
+      "url": "/lambda/puzzle"
+    }
+  ],
+  "user_data_fields": [
+    "id",
+    "district_id",
+    "region_id",
+    "section_id",
+    "org_id",
+    "unit_id",
+    "position_id"
+  ],
+  "data_form_custom_elements": [
+    {
+      "element": "arcGISLayer"
+    },
+    {
+      "element": "arcGISReport"
+    },
+    {
+      "element": "arcGISAttributeSelector"
+    },
+    {
+      "element": "arcGISLayerAttributeConnector"
+    },
+    {
+      "element": "arcGISLayerAttributeConnectorLayer"
+    },
+    {
+      "element": "geoElement"
+    }
+  ],
+  "password_reset_time_out": 30,
+  "static_words": {
+    "mn": {
+      "title": "Khan Khulgun",
+      "subtitle": "Khan Khulgun CMS based on echo & Lambda",
+      "login": "Нэвтрэх",
+      "forgot": "Нууц үгээ мартсан?",
+      "remember": "Энэ компьютерт сануулах",
+      "loginTitle": "СИСТЕМД НЭВТРЭХ",
+      "username": "Нэвтрэх нэр",
+      "email": "И-мэйл",
+      "password": "Нууц үг",
+      "loginSuccess": "Амжилттай нэвтэрлээ. Түр хүлээнэ үү!",
+      "loginError": "Уучлаарай, нэвтрэх үед алдаа гарлаа!!",
+      "emailRequired": "И-мэйл хаяг аа оруулна уу",
+      "forgotDescription": "И-мэйл хаягаа оруулаад нууц үг шинэчлэнэ үү",
+      "sendPasswordResetCode": "Нууц үг солих код и-мэйлээр авах",
+      "passwordConfirm": "Нууц үг баталгаажуулах",
+      "userNotFound": "Хэрэгэлч олдсонгүй !!!",
+      "codeSentError": "Нууц үг шинэчлэх код илгээх үед алдаа гарлаа!",
+      "passwordReset": "НУУЦ ҮГ ШИНЭЧЛЭХ",
+      "passwordResetCode": "Нууц үгээ сэргээх код",
+      "passwordResetCodeSent": "Нууц үг шинэчлэх код амжилттай илгээгдлээ !",
+      "passwordResetCodeRequired": "Нууц үг солих код  оруулаагүй байна !!!",
+      "passwordResetSuccess": "Нууц үг амжилттай шинэчлэгдлээ !",
+      "passwordConfirmError": "Нууц үг баталгаажуулалт таарсангүй !!!",
+      "passwordResetCodeIncorrect": "Нууц үг сэргээх код буруу байна !!!",
+      "passwordResetCodeTimeout": "Нууц үг сэргээх кодны хугацаа дууссан !!!",
+      "noReply": "Энэхүү и-мэйл нь автоматаар илгээгдсэн учир хариу бичих шаардлагагүй."
+    }
+  },
+  "notify": {
+    "firebaseConfig":{
+      "apiKey": "AIzaSyALE_S97OpYcHeq4gQS6BlNJGBc4-eyNT8",
+      "authDomain": "manaikhoroo-eff9e.firebaseapp.com",
+      "databaseURL": "https://manaikhoroo-eff9e.firebaseio.com",
+      "projectId": "manaikhoroo-eff9e",
+      "storageBucket": "manaikhoroo-eff9e.appspot.com",
+      "messagingSenderId": "237172700972",
+      "appId": "1:237172700972:web:79807f8fc8e08620fede89",
+      "measurementId": "G-Z7JECW4SDP",
+      "publicKey": "BKPApHJI76gVq_hwpk1wm-Hl3XNzBWKh1M2xkCkzw4WEz1dr5_pXPRommMPY6qqBcHilTIcbr9yLd3phMpsrFYU"
+    },
+    "serverKey": "AAAANziYNyw:APA91bHIaYhlCP6udtJfUWIfUW4vtrrGKryyp4rx99wxkrnJk64FwDxYg6orgxMdfaZlEirWxXRaK2JqI0G_3SmKBmYyHYwghRDWxl9dxlalUBnBjxOJjB3ijkmYaPh3zipkcEUMJkFm",
+    "sound":"/lambda2/notification.mp3",
+    "icon":"http://localhost/manaikhoroo/logo.png"
+  }
+}

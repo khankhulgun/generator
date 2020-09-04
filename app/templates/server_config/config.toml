@@ -1,0 +1,33 @@
+[database]
+connection = "mysql"
+server = "127.0.0.1"
+port = "3306"
+database = "khankhulgun"
+user = "root"
+password = ""
+
+[app]
+name = "Virtual Platform"
+port = ":80"
+migrate = "false"
+seed = "false"
+
+[superadmin]
+login = "superadmin"
+password = "superadmin"
+email = "munkaltai@gmail.com"
+
+[JWT]
+secret="hBakSJHRuoQKSZZvhOCc6NHeGUPwePNg"
+ttl=2160
+
+[mail]
+driver="smtp"
+host="smtp.gmail.com"
+port=587
+username="mipgsoft@gmail.com"
+password="pKMZWLv9"
+encryption="tls"
+
+[lambdaconfig]
+configfile = "lambda.json"

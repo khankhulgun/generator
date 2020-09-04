@@ -1,0 +1,24 @@
+{
+  "name": "generator-khankhulgun",
+  "version": "0.0.1",
+  "description": "yeoman-generator",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "Khankhulgun generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "4.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khankhulgun/generator"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Munkh-Altai Chuluunbaatar",
+    "email": "munkh-altai@khankhulgun.mn",
+    "url": "https://khankhulgun.mn"
+  }
+}
