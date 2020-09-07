@@ -47,10 +47,12 @@ module.exports = class extends Generator {
 
         let srcDir = this.destinationPath(path.join('', this.projectName));
         let serviceDir = this.destinationPath(path.join(this.projectName, this.serviceName));
+        let projectPublicDir = srcDir+"/public/"+this.projectName;
 
 
 
         mkdir.sync(srcDir);
+        mkdir.sync(projectPublicDir);
         mkdir.sync(serviceDir);
 
 
@@ -67,9 +69,10 @@ module.exports = class extends Generator {
             path.join(srcDir, 'config.toml')
         );
         this.fs.copy(
-            this.templatePath('lambda.json'),
-            path.join(srcDir, 'lambda.json')
+            this.templatePath('logo.png'),
+            path.join(projectPublicDir, 'logo.png')
         );
+
         this.fs.copy(
             this.templatePath('init'),
             path.join(srcDir, 'init')
@@ -88,6 +91,11 @@ module.exports = class extends Generator {
             projectName: this.projectName,
             serviceName: this.serviceName,
         };
+        this.fs.copyTpl(
+            this.templatePath('lambda.json'),
+            path.join(srcDir, 'lambda.json'),
+            copyTpl
+        );
 
         this.fs.copyTpl(
             this.templatePath('main.go'),
