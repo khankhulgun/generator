@@ -14,7 +14,12 @@
   "controlPanel": {
     "logoLight": "/<%= projectName %>/logo.png",
     "logoDark": "/<%= projectName %>/logo.png",
-    "brandBtnUrl":"/control"
+    "brandBtnUrl":"/control",
+    "themeMode":"light",
+    "primaryColor": "#1d3faa",
+    "themeColors": ["#043350", "#3C42C3", "#1d3faa", "#166e64", "#24AB26", "#EA8516", "#D71E54", "#16206A", "#1C1D1E"],
+    "extraStyles":[],
+    "extraScripts":[]
   },
   "languages": [
     {
