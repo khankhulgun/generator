@@ -11,6 +11,11 @@
   "super_url": "/lambda/puzzle",
   "app_url": "/control",
   "has_language": false,
+  "controlPanel": {
+    "logoLight": "/<%= projectName %>/logo.png",
+    "logoDark": "/<%= projectName %>/logo.png",
+    "brandBtnUrl":"/control"
+  },
   "languages": [
     {
       "label": "Moнгол",
