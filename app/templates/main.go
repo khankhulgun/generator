@@ -13,7 +13,7 @@ import (
 func main() {
 
 
-	app := khankhulgun.New("<%= projectName %>", gridCaller.GetMODEL, caller.GetMODEL, validationCaller.GetMessages, validationCaller.GetRules, true)
+	app := khankhulgun.New("<%= projectName %>", gridCaller.GetMODEL, caller.GetMODEL, validationCaller.GetMessages, validationCaller.GetRules)
 
     <%= serviceName %>.Set(app.Echo)
 

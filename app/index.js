@@ -48,12 +48,14 @@ module.exports = class extends Generator {
         let srcDir = this.destinationPath(path.join('', this.projectName));
         let serviceDir = this.destinationPath(path.join(this.projectName, this.serviceName));
         let projectPublicDir = srcDir+"/public/"+this.projectName;
+        let initDir = srcDir+"/init";
 
 
 
         mkdir.sync(srcDir);
         mkdir.sync(projectPublicDir);
         mkdir.sync(serviceDir);
+        mkdir.sync(initDir);
 
 
         this.fs.copy(
@@ -105,6 +107,11 @@ module.exports = class extends Generator {
         this.fs.copyTpl(
             this.templatePath('go.mod'),
             path.join(srcDir, 'go.mod'),
+            tmplContext
+        );
+        this.fs.copyTpl(
+            this.templatePath('init/init.go'),
+            path.join(initDir, 'init.go'),
             tmplContext
         );
         this.fs.copyTpl(
