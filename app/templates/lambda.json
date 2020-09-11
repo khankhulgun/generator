@@ -1,6 +1,6 @@
 {
   "theme": "aside",
-  "domain": "http://localhost:3000",
+  "domain": "http://localhost",
   "title": "Khan Khulgun",
   "subTitle": "Khan Khulgun CMS based on echo & Lambda",
   "copyright": "Khan Khulgun LLC© 2020",
