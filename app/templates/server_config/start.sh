@@ -1,3 +1,4 @@
+sudo rm -R models
 echo "Stoping service"
 sudo systemctl stop goweb2
 echo "Service Stoped"
