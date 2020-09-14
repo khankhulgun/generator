@@ -1,6 +1,6 @@
 .idea
-models
-public
+/models
+/public
 server_config
 .DS_Store
 *.DS_Store
