@@ -3,7 +3,14 @@
 const path = require('path');
 const Generator = require('yeoman-generator');
 const mkdir = require('mkdirp');
-
+function getKey(length) {
+    var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var result = '';
+    for ( var i = 0; i < length; i++ ) {
+        result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+    }
+    return result;
+}
 module.exports = class extends Generator {
 
     paths() {
@@ -35,7 +42,7 @@ module.exports = class extends Generator {
         return this.prompt(prompts).then(props => {
             this.projectName = props.projectName.replace(/\s+/g, '-').toLowerCase();
             this.serviceName = props.serviceName.replace(/\s+/g, '-').toLowerCase();
-
+            this.secretKey = getKey(34)
 
             cb()
         });
@@ -66,10 +73,7 @@ module.exports = class extends Generator {
             this.templatePath('README.md'),
             path.join(srcDir, 'README.md')
         );
-        this.fs.copy(
-            this.templatePath('config.toml'),
-            path.join(srcDir, 'config.toml')
-        );
+
         this.fs.copy(
             this.templatePath('logo.png'),
             path.join(projectPublicDir, 'logo.png')
@@ -92,10 +96,17 @@ module.exports = class extends Generator {
         let tmplContext = {
             projectName: this.projectName,
             serviceName: this.serviceName,
+            secretKey: this.secretKey,
         };
         this.fs.copyTpl(
             this.templatePath('lambda.json'),
             path.join(srcDir, 'lambda.json'),
+            tmplContext
+        );
+
+        this.fs.copyTpl(
+            this.templatePath('config.toml'),
+            path.join(srcDir, 'config.toml'),
             tmplContext
         );
 

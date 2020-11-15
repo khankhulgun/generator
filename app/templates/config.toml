@@ -18,15 +18,15 @@ password = "superadmin"
 email = "munkaltai@gmail.com"
 
 [JWT]
-secret="hBakSJHRuoQKSZZvhOCc6NHeGUPwePNg"
+secret="<%= secretKey %>"
 ttl=2160
 
 [mail]
 driver="smtp"
 host="smtp.gmail.com"
 port=587
-username="mipgsoft@gmail.com"
-password="pKMZWLv9"
+username=""
+password=""
 encryption="tls"
 
 [lambdaconfig]
