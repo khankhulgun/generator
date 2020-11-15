@@ -100,17 +100,17 @@
   },
   "notify": {
     "firebaseConfig":{
-      "apiKey": "AIzaSyALE_S97OpYcHeq4gQS6BlNJGBc4-eyNT8",
+      "apiKey": "",
       "authDomain": "",
       "databaseURL": "",
       "projectId": "",
       "storageBucket": "",
       "messagingSenderId": "",
-      "appId": "1:237172700972:web:79807f8fc8e08620fede89",
-      "measurementId": "G-Z7JECW4SDP",
-      "publicKey": "BKPApHJI76gVq_hwpk1wm-Hl3XNzBWKh1M2xkCkzw4WEz1dr5_pXPRommMPY6qqBcHilTIcbr9yLd3phMpsrFYU"
+      "appId": "",
+      "measurementId": "",
+      "publicKey": ""
     },
-    "serverKey": "AAAANziYNyw:APA91bHIaYhlCP6udtJfUWIfUW4vtrrGKryyp4rx99wxkrnJk64FwDxYg6orgxMdfaZlEirWxXRaK2JqI0G_3SmKBmYyHYwghRDWxl9dxlalUBnBjxOJjB3ijkmYaPh3zipkcEUMJkFm",
+    "serverKey": "",
     "sound":"/lambda2/notification.mp3",
     "icon":""
   }
