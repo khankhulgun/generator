@@ -121,6 +121,16 @@ module.exports = class extends Generator {
             tmplContext
         );
         this.fs.copyTpl(
+            this.templatePath('runner.conf'),
+            path.join(srcDir, 'runner.conf'),
+            tmplContext
+        );
+        this.fs.copyTpl(
+            this.templatePath('start.sh'),
+            path.join(srcDir, 'start.sh'),
+            tmplContext
+        );
+        this.fs.copyTpl(
             this.templatePath('init/init.go'),
             path.join(initDir, 'init.go'),
             tmplContext
