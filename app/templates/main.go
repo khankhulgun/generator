@@ -14,8 +14,8 @@ func main() {
 
     app := khankhulgun.New("<%= projectName %>", gridCaller.GetMODEL, caller.GetMODEL, validationCaller.GetMessages, validationCaller.GetRules, &khankhulgun.Settings{
             UseControlPanel: true,
-            UseNotify: true,
-            UseCrudLogger: true,
+            UseNotify: false,
+            UseCrudLogger: false,
         })
     <%= serviceName %>.Set(app.Echo)
 
